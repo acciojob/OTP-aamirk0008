@@ -1,9 +1,8 @@
-//your JS code here. If required.
 const codeInputs = document.querySelectorAll('.code');
         
         // Focus the first input on page load
         window.addEventListener('load', () => {
-            codeInputs[0].focus();
+            document.getElementById('code-1').focus();
         });
 
         codeInputs.forEach((input, index) => {
@@ -26,14 +25,13 @@ const codeInputs = document.querySelectorAll('.code');
             // Handle keydown event (backspace behavior)
             input.addEventListener('keydown', (e) => {
                 if (e.key === 'Backspace') {
-                    // If current field has content, clear it
+                    // Clear current field first
                     if (input.value) {
                         input.value = '';
                     } 
-                    // If current field is empty and not the first input, move to previous
+                    // If we're not on the first input, move to previous field
                     else if (index > 0) {
                         codeInputs[index - 1].focus();
-                        codeInputs[index - 1].value = '';
                     }
                 }
                 
@@ -93,7 +91,7 @@ const codeInputs = document.querySelectorAll('.code');
         function resendCode() {
             // Clear all inputs
             codeInputs.forEach(input => input.value = '');
-            codeInputs[0].focus();
+            document.getElementById('code-1').focus();
             
             // Simulate resend process
             console.log('Resending verification code...');
