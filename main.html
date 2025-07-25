@@ -8,6 +8,25 @@
 
 <body>
 	<!-- the entire body must be written by student -->
+	<div class="container">
+        <h1 id="verification_heading">Verify Your Account</h1>
+        <p id="verification_subtext">We've sent a 6-digit verification code to your email address. Please enter the code below to verify your account.</p>
+        
+        <div class="code-container">
+            <input type="text" class="code" maxlength="1" pattern="[0-9]" inputmode="numeric">
+            <input type="text" class="code" maxlength="1" pattern="[0-9]" inputmode="numeric">
+            <input type="text" class="code" maxlength="1" pattern="[0-9]" inputmode="numeric">
+            <input type="text" class="code" maxlength="1" pattern="[0-9]" inputmode="numeric">
+            <input type="text" class="code" maxlength="1" pattern="[0-9]" inputmode="numeric">
+            <input type="text" class="code" maxlength="1" pattern="[0-9]" inputmode="numeric">
+        </div>
+        
+        <button class="verify-btn" onclick="verifyCode()">Verify Account</button>
+        
+        <div>
+            <a href="#" class="resend-link" onclick="resendCode()">Didn't receive the code? Resend</a>
+        </div>
+    </div>
     <script type="text/javascript" src="./script.js">
 </script>
 
